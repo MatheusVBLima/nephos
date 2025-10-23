@@ -145,7 +145,7 @@ export function FAQ() {
   ];
 
   return (
-    <section className="bg-background relative w-full overflow-hidden py-16">
+    <section className="relative w-full overflow-hidden py-16">
       {/* Decorative elements */}
       <div className="bg-primary/5 absolute top-20 -left-20 h-64 w-64 rounded-full blur-3xl" />
       <div className="bg-primary/5 absolute -right-20 bottom-20 h-64 w-64 rounded-full blur-3xl" />
@@ -164,7 +164,7 @@ export function FAQ() {
             FAQs
           </Badge>
 
-          <h2 className="from-primary mb-3 bg-gradient-to-r to-rose-400 bg-clip-text text-3xl font-bold text-transparent">
+          <h2 className="from-primary mb-3 bg-linear-to-r to-primary/50 bg-clip-text text-3xl font-bold text-transparent">
             Frequently Asked Questions
           </h2>
           <p className="text-muted-foreground text-sm">

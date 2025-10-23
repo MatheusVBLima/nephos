@@ -67,9 +67,7 @@ const bentoItems = [
 export default function Home() {
   return (
     <div className="relative min-h-screen bg-neutral-950">
-      {/* Background gradient effect como no Hero */}
-      <div className="absolute top-0 z-[0] h-full w-full bg-neutral-900/10 bg-[radial-gradient(ellipse_20%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
-
+      <div className="absolute top-0 z-0 h-full w-full bg-neutral-900/10 bg-[radial-gradient(ellipse_20%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
       <div className="relative z-10">
         <Header />
         <main>

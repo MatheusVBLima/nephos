@@ -31,7 +31,7 @@ export function Waitlist() {
   const [color, setColor] = useState('#ffffff');
 
   useEffect(() => {
-    setColor(resolvedTheme === 'dark' ? '#ffffff' : '#e60a64');
+    setColor(resolvedTheme === 'dark' ? '#ffffff' : '#ffffff');
   }, [resolvedTheme]);
 
   const handleSubmit = async (e: React.FormEvent) => {

@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence, easeInOut } from 'framer-motion';
-import { Menu, X, ArrowRight, Zap, Search } from 'lucide-react';
+import { Menu, X, ArrowRight, Zap, Search, Cloud } from 'lucide-react';
 import Link from 'next/link';
 
 interface NavItem {
@@ -77,7 +77,7 @@ export function Header() {
   return (
     <>
       <motion.header
-        className={`fixed top-0 right-0 left-0 z-50 transition-all duration-500 ${
+        className={`fixed top-0 right-0 left-0 z-200 transition-all duration-500 ${
           isScrolled
             ? 'border-border/50 bg-background/80 border-b shadow-sm backdrop-blur-md'
             : 'bg-transparent'
@@ -100,18 +100,16 @@ export function Header() {
                 className="flex items-center space-x-3"
               >
                 <div className="relative">
-                  <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-rose-500 via-rose-600 to-rose-700 shadow-lg">
-                    <Zap className="h-5 w-5 text-white" />
+                  <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary shadow-lg">
+                    <Cloud className="h-5 w-5 text-white" />
                   </div>
-                  <div className="absolute -top-1 -right-1 h-3 w-3 animate-pulse rounded-full bg-green-400"></div>
+                  
                 </div>
                 <div className="flex flex-col">
                   <span className="text-foreground text-lg font-bold">
-                    Acme Inc.
+                    Nephos Studio
                   </span>
-                  <span className="text-muted-foreground -mt-1 text-xs">
-                    Build faster
-                  </span>
+                  
                 </div>
               </Link>
             </motion.div>

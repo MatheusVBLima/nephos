@@ -28,12 +28,9 @@ export function Waitlist() {
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const { resolvedTheme } = useTheme();
-  const [color, setColor] = useState('#ffffff');
+  const [color, ] = useState('#ffffff');
 
-  useEffect(() => {
-    setColor(resolvedTheme === 'dark' ? '#ffffff' : '#ffffff');
-  }, [resolvedTheme]);
-
+ 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -90,7 +87,7 @@ export function Waitlist() {
           )}
         >
           Join the{' '}
-          <span className="bg-primary from-foreground to-primary via-rose-300 bg-clip-text text-transparent dark:bg-gradient-to-b">
+          <span className="bg-gradient-to-b from-[#7877C6] to-[#E2CBFF] bg-clip-text text-transparent">
             Waitlist
           </span>
         </motion.h1>
@@ -114,33 +111,33 @@ export function Waitlist() {
         >
           <div
             className={cn(
-              'border-primary/10 flex flex-col items-center justify-center rounded-xl border bg-white/5 p-4 backdrop-blur-md',
+              'border-[#7877C6]/20 flex flex-col items-center justify-center rounded-xl border bg-white/5 p-4 backdrop-blur-md',
               resolvedTheme === 'dark' ? 'glass' : 'glass2',
             )}
           >
-            <Code className="text-primary mb-2 h-5 w-5" />
+            <Code className="mb-2 h-5 w-5 text-[#E2CBFF]" />
             <span className="text-xl font-bold">4 Platforms</span>
             <span className="text-muted-foreground text-xs">Multi-Stream</span>
           </div>
 
           <div
             className={cn(
-              'border-primary/10 flex flex-col items-center justify-center rounded-xl border bg-white/5 p-4 backdrop-blur-md',
+              'border-[#7877C6]/20 flex flex-col items-center justify-center rounded-xl border bg-white/5 p-4 backdrop-blur-md',
               resolvedTheme === 'dark' ? 'glass' : 'glass2',
             )}
           >
-            <ExternalLink className="text-primary mb-2 h-5 w-5" />
+            <ExternalLink className="mb-2 h-5 w-5 text-[#E2CBFF]" />
             <span className="text-xl font-bold">1080p+</span>
             <span className="text-muted-foreground text-xs">HD Quality</span>
           </div>
 
           <div
             className={cn(
-              'border-primary/10 flex flex-col items-center justify-center rounded-xl border bg-white/5 p-4 backdrop-blur-md',
+              'border-[#7877C6]/20 flex flex-col items-center justify-center rounded-xl border bg-white/5 p-4 backdrop-blur-md',
               resolvedTheme === 'dark' ? 'glass' : 'glass2',
             )}
           >
-            <Star className="text-primary mb-2 h-5 w-5" />
+            <Star className="mb-2 h-5 w-5 text-[#E2CBFF]" />
             <span className="text-xl font-bold">Instant Setup</span>
             <span className="text-muted-foreground text-xs">No Technical Skills</span>
           </div>
@@ -187,13 +184,13 @@ export function Waitlist() {
                 <button
                   type="submit"
                   disabled={isSubmitting || submitted}
-                  className="group text-primary-foreground focus:ring-primary/50 relative overflow-hidden rounded-xl bg-gradient-to-b from-rose-500 to-rose-700 px-8 py-4 font-semibold text-white shadow-[0px_2px_0px_0px_rgba(255,255,255,0.3)_inset] transition-all duration-300 hover:shadow-[0_0_20px_rgba(236,72,153,0.4)] focus:ring-2 focus:outline-none active:scale-95 disabled:cursor-not-allowed disabled:opacity-50"
+                  className="group text-primary-foreground focus:ring-primary/50 relative overflow-hidden rounded-xl bg-linear-to-b from-primary to-primary/70 px-8 py-4 font-semibold shadow-[0px_2px_0px_0px_rgba(255,255,255,0.3)_inset] transition-all duration-300 hover:shadow-[0_0_20px_rgba(120,119,198,0.4)] focus:ring-2 focus:outline-none active:scale-95 disabled:cursor-not-allowed disabled:opacity-50"
                 >
                   <span className="relative z-10 flex items-center justify-center gap-2">
                     {isSubmitting ? 'Joining...' : 'Join Waitlist'}
                     <Sparkles className="h-4 w-4 transition-all duration-300 group-hover:rotate-12" />
                   </span>
-                  <span className="to-primary absolute inset-0 z-0 bg-gradient-to-r from-rose-500 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></span>
+                  <span className="absolute inset-0 z-0 bg-gradient-to-r from-primary to-primary/70 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></span>
                 </button>
               </>
             ) : (
